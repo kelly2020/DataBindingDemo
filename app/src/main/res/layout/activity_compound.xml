@@ -11,7 +11,9 @@
             name="view"
             type="View"/>
 
-
+        <variable
+            name="event"
+            type="databind.wondersgroup.com.databindingdemo.listener.EventListener"/>
         <variable
             name="user"
             type="databind.wondersgroup.com.databindingdemo.model.CompoundModel" />
@@ -26,6 +28,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+        
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:onClick="@{event.click1}"
+            android:text="change"/>
 
 
         <android.support.v7.widget.RecyclerView
