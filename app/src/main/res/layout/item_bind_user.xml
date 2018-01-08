@@ -1,0 +1,34 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="user"
+            type="databind.wondersgroup.com.databindingdemo.model.User">
+
+        </variable>
+
+        <variable
+            name="event"
+            type="databind.wondersgroup.com.databindingdemo.listener.ItemClickEvent"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="@{event.onItemClick}"
+        android:orientation="horizontal">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="@{user.userAge}" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.userName}" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,26 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="contact"
+            type="databind.wondersgroup.com.databindingdemo.model.Contact"/>
+
+        <variable
+            name="event"
+            type="databind.wondersgroup.com.databindingdemo.listener.ItemClickEvent"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="@{event.onItemClick}"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{contact.mail}" />
+    </LinearLayout>
+</layout>
